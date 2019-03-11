@@ -1,5 +1,7 @@
 package com.bits.squad.edurate.models;
 
+import javax.persistence.Entity;
+
 public class Login {
 
         private String username;
