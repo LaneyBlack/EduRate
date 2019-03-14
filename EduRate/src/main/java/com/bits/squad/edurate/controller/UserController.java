@@ -10,4 +10,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    public String addUser(){
+        return null;
+    }
 }
