@@ -1,6 +1,4 @@
-package com.bits.squad.edurate.models;
-
-import org.hibernate.id.GUIDGenerator;
+package com.bits.squad.edurate.model;
 
 import javax.persistence.*;
 

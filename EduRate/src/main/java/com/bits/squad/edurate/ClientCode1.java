@@ -1,6 +1,6 @@
 package com.bits.squad.edurate;
 
-import com.bits.squad.edurate.models.User;
+import com.bits.squad.edurate.model.User;
 import com.bits.squad.edurate.util.HibernateUtil;
 import org.hibernate.*;
 
