@@ -19,12 +19,16 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void addUser(User user) {
-
+        Session session = this.sessionFactory.getCurrentSession();
+        session.persist(user);
+        logger.info("User saved successfully, User Details = " + user);
     }
 
     @Override
     public void updateUser(User user) {
-
+        Session session = this.sessionFactory.getCurrentSession();
+        session.update(user);
+        logger.info("User updated successfully, User Details = " + user);
     }
 
     @Override
