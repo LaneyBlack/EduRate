@@ -10,7 +10,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id", nullable = false, unique = true)
+    @Column(name = "UserId", nullable = false, unique = true)
     private String id;
 
     public String getId() {
@@ -21,7 +21,7 @@ public class User {
         this.id = id;
     }
 
-    @Column(name = "user_name", nullable = false, unique = true)
+    @Column(name = "UserName", nullable = false, unique = true)
     private String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public class User {
         this.name = name;
     }
 
-    @Column(name = "user_password", nullable = false)
+    @Column(name = "UserPassword", nullable = false)
     private String password;
 
     public String getPassword() {
