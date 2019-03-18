@@ -1,6 +1,6 @@
 CREATE SCHEMA `edurate` ;
 
-CREATE TABLE `world`.`user` (
+CREATE TABLE `edurate`.`user` (
   `UserId` INT NOT NULL,
   `UserName` VARCHAR(45) NOT NULL,
   `UserPassword` VARCHAR(45) NOT NULL,

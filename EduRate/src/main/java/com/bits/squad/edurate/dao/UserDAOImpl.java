@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-
 public class UserDAOImpl implements UserDAO {
 
     private static final Logger logger = LoggerFactory.getLogger(UserDAOImpl.class);
@@ -34,7 +33,6 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public List<User> userList() {
         Session session = this.sessionFactory.getCurrentSession();
-                                                    //ToDo
         List<User> userList = session.createQuery("from User").list();
         for (User user : userList) {
             logger.info("User List::" + user);
