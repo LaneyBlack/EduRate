@@ -18,6 +18,11 @@ public class UserController {
     @Autowired
     private UserServiceImpl userServiceImpl;
 
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home(){
+        return "home";
+    }
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public void registerUser(String username, String password) {
         User user = new User(username, password);
