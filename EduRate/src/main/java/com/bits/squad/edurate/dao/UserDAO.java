@@ -1,12 +1,13 @@
-package com.bits.squad.edurate.service;
+package com.bits.squad.edurate.dao;
+
 
 import com.bits.squad.edurate.model.Login;
 import com.bits.squad.edurate.model.User;
 
-public interface UserService {
-
-    User validateUser(Login login);
+public interface UserDAO {
 
     void register(User user);
+
+    User validateUser(Login login);
 
 }

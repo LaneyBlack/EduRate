@@ -8,19 +8,6 @@ import javax.persistence.*;
                 @UniqueConstraint(columnNames = "UserPassword")})
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "UserId", nullable = false, unique = true)
-    private String id;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     @Column(name = "UserName", nullable = false, unique = true)
     private String name;
 
@@ -30,6 +17,17 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Column(name = "UserFirstName", nullable = false)
+    private String firstName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     @Column(name = "UserPassword", nullable = false)
@@ -54,7 +52,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
+                "firstName='" + firstName + '\'' +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 '}';

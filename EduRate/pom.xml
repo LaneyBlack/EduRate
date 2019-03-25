@@ -183,7 +183,7 @@
                     <port>8081</port>
                     <url>http://localhost:9080/manager/text</url>
                     <server>TomcatServer</server>
-                    <path>/hibernatedemo</path>
+                    <path>/edurate</path>
                     <username>admin</username>
                     <password>741028</password>
                     <contextReloadable>true</contextReloadable>
