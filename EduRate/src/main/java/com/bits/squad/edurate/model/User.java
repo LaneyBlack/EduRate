@@ -19,17 +19,6 @@ public class User {
         this.name = name;
     }
 
-    @Column(name = "UserFirstName", nullable = false)
-    private String firstName;
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     @Column(name = "UserPassword", nullable = false)
     private String password;
 
@@ -41,9 +30,21 @@ public class User {
         this.password = password;
     }
 
-    public User(String name, String password) {
+    @Column(name = "UserFirstName", nullable = false)
+    private String firstName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public User(String name, String password, String firstName) {
         this.name = name;
         this.password = password;
+        this.firstName = firstName;
     }
 
     public User() {
@@ -52,9 +53,9 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
                 '}';
     }
 }

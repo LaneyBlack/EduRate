@@ -6,11 +6,8 @@ import com.bits.squad.edurate.model.Login;
 import com.bits.squad.edurate.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
 import javax.sql.DataSource;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
@@ -44,12 +41,3 @@ public class UserDAOImpl implements UserDAO {
     }
 }
 
-class UserMapper implements RowMapper<User> {
-    public User mapRow(ResultSet rs, int arg1) throws SQLException {
-        User user = new User();
-        user.setName(rs.getString("username"));
-        user.setPassword(rs.getString("password"));
-        user.setFirstName(rs.getString("firstname"));
-        return user;
-    }
-}

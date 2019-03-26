@@ -1,17 +1,17 @@
 package com.bits.squad.edurate.controller;
 
-import com.bits.squad.edurate.model.User;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-import java.text.DateFormat;
-import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 public class HomeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String homeStartMethod() {
-
-        return "home";
+    public ModelAndView homeStartMethod(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView modelAndView = new ModelAndView("home");
+        return modelAndView;
     }
 }
