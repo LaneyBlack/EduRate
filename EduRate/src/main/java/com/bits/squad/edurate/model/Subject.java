@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Subject {
 
-    String name;
+    private String name;
 
     public String getName() {
         return name;
@@ -15,8 +15,7 @@ public class Subject {
         this.name = name;
     }
 
-    List<Integer> marks = new ArrayList();
-
+    private List<Integer> marks;
     public List<Integer> getMarks() {
         return marks;
     }
