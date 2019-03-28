@@ -1,12 +1,15 @@
 package com.bits.squad.edurate.service;
 
-import com.bits.squad.edurate.model.Login;
 import com.bits.squad.edurate.model.User;
+
+import java.util.List;
 
 public interface UserService {
 
-    User validateUser(Login login);
-
-    void register(User user);
-
+    public void addUser(User u);
+    public void updateUser(User u);
+    public List<User> userList();
+    public User getUserById(int id);
+    public void removeUser(int id);
+    public User getUserByName(String name);
 }

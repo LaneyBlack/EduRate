@@ -15,3 +15,10 @@ ADD COLUMN `UserFirstName` VARCHAR(45) NOT NULL AFTER `UserPassword`,
 DROP INDEX `idUser_UNIQUE` ,
 DROP PRIMARY KEY;
 ;
+
+ALTER TABLE `edurate`.`user`
+ADD COLUMN `UserId` INT ,
+ADD PRIMARY KEY (`UserId`),
+ADD UNIQUE INDEX `UserId_UNIQUE` (`UserId` ASC);
+;
+

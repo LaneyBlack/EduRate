@@ -3,14 +3,14 @@
     <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome</title>
+        <title>EduRate : Welcome</title>
     </head>
     <body>
         <table align="center">
             <tr>
-                <td><a href="login">Login</a>
+                <td><a href="login" >Login</a>
                 </td>
-                <td><a href="register">Register</a>
+                <td><a href="registration">Register</a>
                 </td>
             </tr>
         </table>

@@ -5,8 +5,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user", catalog = "edurate",
         uniqueConstraints = {@UniqueConstraint(columnNames = "UserName"),
-                @UniqueConstraint(columnNames = "UserPassword")})
+                            @UniqueConstraint(columnNames = "UserId")})
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "UserId", unique = true, nullable = false)
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     @Column(name = "UserName", nullable = false, unique = true)
     private String name;
@@ -41,19 +54,21 @@ public class User {
         this.firstName = firstName;
     }
 
-    public User(String name, String password, String firstName) {
+    public User() {
+    }
+
+    public User(Integer id, String name, String password, String firstName) {
+        this.id = id;
         this.name = name;
         this.password = password;
         this.firstName = firstName;
     }
 
-    public User() {
-    }
-
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 '}';
