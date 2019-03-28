@@ -7,11 +7,6 @@
     </head>
     <body>
         <table align="center">
-            <tr>
-                <td><a href="login" >Login</a>
-                </td>
-
-                </tr>
         </table>
     </body>
     </html>

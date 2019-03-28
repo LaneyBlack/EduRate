@@ -33,7 +33,7 @@ public class LoginController {
                 userSession=user;
                 String str = userSession.getName();
                 model.addAttribute("message", str);
-                return "welcome";
+                return "home";
             }
             else {
                 model.addAttribute("message", "wrong password");
