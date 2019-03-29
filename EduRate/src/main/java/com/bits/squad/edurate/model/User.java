@@ -8,6 +8,16 @@ import javax.persistence.*;
                             @UniqueConstraint(columnNames = "UserId")})
 public class User {
 
+    public User() {
+    }
+
+    public User(Integer id, String name, String password, String firstName) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.firstName = firstName;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UserId", unique = true, nullable = false)
@@ -51,16 +61,6 @@ public class User {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public User() {
-    }
-
-    public User(Integer id, String name, String password, String firstName) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
         this.firstName = firstName;
     }
 

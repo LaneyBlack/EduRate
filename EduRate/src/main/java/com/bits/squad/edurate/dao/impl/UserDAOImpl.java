@@ -10,6 +10,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import java.util.List;
+
 @Repository
 public class UserDAOImpl implements UserDAO {
     @Autowired
@@ -35,7 +36,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public List<User> userList() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<User> userList = session.createQuery("from User").list();
+        List<User> userList = session.createQuery("from user").list();
         return userList;
     }
 
@@ -59,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
     public User getUserByName(String name) {
         Session session = this.sessionFactory.getCurrentSession();
         Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("login", name));
+        criteria.add(Restrictions.eq("UserName", name));
         User user = (User) criteria.uniqueResult();
         return user;
     }

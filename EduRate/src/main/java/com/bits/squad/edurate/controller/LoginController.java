@@ -18,7 +18,7 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String showLogin(Model model) { ;
+    public String showLogin(Model model) {
         ModelAndView modelAndView = new ModelAndView("login");
         model.addAttribute("login", new User());
         return "login";
@@ -33,7 +33,7 @@ public class LoginController {
                 userSession=user;
                 String str = userSession.getName();
                 model.addAttribute("message", str);
-                return "home";
+                return "welcome";
             }
             else {
                 model.addAttribute("message", "wrong password");

@@ -6,10 +6,10 @@ import com.bits.squad.edurate.model.User;
 import java.util.List;
 
 public interface UserDAO {
-    public void addUser(User u);
-    public void updateUser(User u);
-    public List<User> userList();
-    public User getUserById(int id);
-    public void removeUser(int id);
-    public User getUserByName(String login);
+    void addUser(User u);
+    void updateUser(User u);
+    List<User> userList();
+    User getUserById(int id);
+    void removeUser(int id);
+    User getUserByName(String name);
 }

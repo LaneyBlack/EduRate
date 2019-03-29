@@ -1,11 +1,23 @@
 package com.bits.squad.edurate.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Subject {
 
+    public Subject() {
+    }
+
+    public Subject(String name) {
+        this.name = name;
+    }
+
     private String name;
+
+    private int semester;
+
+    private HashMap<Integer, Integer> marks;
+
 
     public String getName() {
         return name;
@@ -15,20 +27,19 @@ public class Subject {
         this.name = name;
     }
 
-    private List<Integer> marks;
-    public List<Integer> getMarks() {
+    public int getSemester() {
+        return semester;
+    }
+
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
+
+    public HashMap<Integer, Integer> getMarks() {
         return marks;
     }
 
-    public void setMarks(List<Integer> marks) {
+    public void setMarks(HashMap<Integer, Integer> marks) {
         this.marks = marks;
-    }
-
-    @Override
-    public String toString() {
-        return "Subject{" +
-                "name='" + name + '\'' +
-                ", marks=" + marks +
-                '}';
     }
 }
