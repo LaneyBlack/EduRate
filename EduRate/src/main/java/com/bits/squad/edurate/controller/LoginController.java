@@ -26,22 +26,20 @@ public class LoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String doLogin(Model model, @ModelAttribute("user_session") User userSession,
-                          @ModelAttribute("log") User userLog){
+                          @ModelAttribute("login") User userLog){
         User user = userService.getUserByName(userLog.getName());
         if(user != null){
             if(user.getPassword().equals(userLog.getPassword())){
                 userSession=user;
                 String str = userSession.getName();
                 model.addAttribute("message", str);
-                return "welcome";
+                return "home";
             }
             else {
-                model.addAttribute("message", "wrong password");
                 return "notFound";
             }
         }
         else {
-            model.addAttribute("message", "not found login");
             return "notFound";
         }
     }

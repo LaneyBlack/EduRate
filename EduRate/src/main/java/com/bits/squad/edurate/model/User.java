@@ -12,11 +12,11 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String name, String password, String firstName) {
+    public User(Integer id, String name, String password, String firstname) {
         this.id = id;
         this.name = name;
         this.password = password;
-        this.firstName = firstName;
+        this.firstname = firstname;
     }
 
     @Id
@@ -55,14 +55,14 @@ public class User {
     }
 
     @Column(name = "UserFirstName", nullable = false)
-    private String firstName;
+    private String firstname;
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
-                ", firstName='" + firstName + '\'' +
+                ", firstname='" + firstname + '\'' +
                 '}';
     }
 }

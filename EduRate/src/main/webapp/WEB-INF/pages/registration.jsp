@@ -12,9 +12,9 @@
         <form th:action="@{/register}" method="post" >
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
      <label for="inputName" class="sr-only">Name</label>
-       <input type="name" id="name" name="name" class="form-control" placeholder="Name" required autofocus>
-     <label for="FirstName" class="sr-only">First Name</label>
-       <input type="name" id="firstname" name="firstname" class="form-control" placeholder="FirstName" required>
+       <input type="name" id="inputName" name="name" class="form-control" placeholder="Name" required autofocus>
+     <label for="inputFirstName" class="sr-only">First Name</label>
+       <input type="name" id="inputFirstName" name="firstname" class="form-control" placeholder="FirstName" required>
      <label for="inputPassword" class="sr-only">Password</label>
        <input  type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>

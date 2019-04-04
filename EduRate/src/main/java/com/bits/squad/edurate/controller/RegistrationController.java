@@ -27,7 +27,7 @@ public class RegistrationController {
     public String addUser(User user, User userSession){
         userService.addUser(user);
         userSession=user;
-        return "welcome";
+        return "home";
     }
 
 
