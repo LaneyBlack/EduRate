@@ -12,9 +12,9 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String name, String password, String firstname) {
+    public User(Integer id, String userName, String password, String firstname) {
         this.id = id;
-        this.name = name;
+        this.userName = userName;
         this.password = password;
         this.firstname = firstname;
     }
@@ -33,14 +33,14 @@ public class User {
     }
 
     @Column(name = "UserName", nullable = false, unique = true)
-    private String name;
+    private String userName;
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     @Column(name = "UserPassword", nullable = false)
@@ -69,7 +69,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", firstname='" + firstname + '\'' +
                 '}';

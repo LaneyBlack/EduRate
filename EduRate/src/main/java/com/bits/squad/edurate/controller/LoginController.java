@@ -27,11 +27,11 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String doLogin(Model model, @ModelAttribute("user_session") User userSession,
                           @ModelAttribute("login") User userLog){
-        User user = userService.getUserByName(userLog.getName());
+        User user = userService.getUserByName(userLog.getUserName());
         if(user != null){
             if(user.getPassword().equals(userLog.getPassword())){
                 userSession=user;
-                String str = userSession.getName();
+                String str = userSession.getUserName();
                 model.addAttribute("message", str);
                 return "home";
             }

@@ -4,11 +4,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>EduRate : Error</title>
-        <h1Error: Wrong name or password</h1>
+        <h1>Error: User with this userName already Exists!</h1>
     </head>
     <body>
         <table align="left">
-        <a href="login" style="font-size: 35px; text-decoration: none">Try again!</a>
+        <a href="registration" style="font-size: 35px; text-decoration: none">Try again!</a>
         </table>
     </body>
 </html>

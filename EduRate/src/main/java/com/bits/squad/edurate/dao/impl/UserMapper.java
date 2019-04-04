@@ -9,7 +9,7 @@ import java.sql.SQLException;
 class UserMapper implements RowMapper<User> {
     public User mapRow(ResultSet rs, int arg1) throws SQLException {
         User user = new User();
-        user.setName(rs.getString("username"));
+        user.setUserName(rs.getString("username"));
         user.setPassword(rs.getString("password"));
         user.setFirstname(rs.getString("firstname"));
         return user;
