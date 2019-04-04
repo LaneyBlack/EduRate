@@ -2,6 +2,7 @@ package com.bits.squad.edurate.controller;
 
 import com.bits.squad.edurate.model.User;
 import com.bits.squad.edurate.service.UserService;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,20 +18,21 @@ public class RegistrationController {
     UserService userService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public ModelAndView getFormUsers(Model model){
+    public ModelAndView getFormUsers(Model model) {
         model.addAttribute("registration", new User());
         ModelAndView modelAndView = new ModelAndView("registration");
         return modelAndView;
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String addUser(User user, User userSession){
-        if(userService.getUserByName(user.getName()) != null) {
-            return "notFound";
-        } else {
+    public String addUser(User user, User userSession) {
+        try {
             userService.addUser(user);
             userSession = user;
-            return "home";
+        } catch (ConstraintViolationException e){
+            return "alreadyExists";
         }
+        return "home";
+
     }
 }
