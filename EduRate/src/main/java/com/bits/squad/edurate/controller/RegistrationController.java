@@ -25,10 +25,12 @@ public class RegistrationController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String addUser(User user, User userSession){
-        userService.addUser(user);
-        userSession=user;
-        return "home";
+        if(userService.getUserByName(user.getName()) != null) {
+            return "notFound";
+        } else {
+            userService.addUser(user);
+            userSession = user;
+            return "home";
+        }
     }
-
-
 }
