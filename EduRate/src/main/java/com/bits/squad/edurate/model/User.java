@@ -33,6 +33,9 @@ public class User {
     @Column(name = "UserPassword", nullable = false)
     private String password;
 
+    @Column(name = "UserSubjects")
+    private String userSubjects;
+
     public Integer getId() {
         return id;
     }
@@ -59,6 +62,13 @@ public class User {
     }
     public void setFirstname(String firstname) {
         this.firstname = firstname;
+    }
+
+    public String getUserSubjects() {
+        return userSubjects;
+    }
+    public void setUserSubjects(String userSubjects) {
+        this.userSubjects = userSubjects;
     }
 
     @Override

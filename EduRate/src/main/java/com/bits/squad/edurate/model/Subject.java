@@ -14,8 +14,6 @@ public class Subject {
 
     private String name;
 
-    private int semester;
-
     private HashMap<Integer, Integer> marks;
 
 
@@ -26,17 +24,18 @@ public class Subject {
         this.name = name;
     }
 
-    public int getSemester() {
-        return semester;
-    }
-    public void setSemester(int semester) {
-        this.semester = semester;
-    }
-
     public HashMap<Integer, Integer> getMarks() {
         return marks;
     }
     public void setMarks(HashMap<Integer, Integer> marks) {
         this.marks = marks;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+                '}';
     }
 }
