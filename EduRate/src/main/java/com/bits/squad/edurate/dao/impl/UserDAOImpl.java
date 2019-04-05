@@ -60,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
     public User getUserByName(String name) {
         Session session = this.sessionFactory.getCurrentSession();
         Criteria criteria = session.createCriteria(User.class);
-        criteria.add(Restrictions.eq("UserName", name));
+        criteria.add(Restrictions.eq("userName", name));
         User user = (User) criteria.uniqueResult();
         return user;
     }

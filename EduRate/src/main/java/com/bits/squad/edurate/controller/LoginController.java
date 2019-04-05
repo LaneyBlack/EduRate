@@ -19,7 +19,6 @@ public class LoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String showLogin(Model model) {
-        ModelAndView modelAndView = new ModelAndView("login");
         model.addAttribute("login", new User());
         return "login";
     }
