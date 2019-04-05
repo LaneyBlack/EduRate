@@ -6,7 +6,7 @@
         <title>EduRate : Welcome</title>
     </head>
     <body>
-        <table align="center">
+        <table align="right">
             <tr>
                 <td><a href="login" >Login</a>
                 </td>
@@ -14,5 +14,6 @@
                 </td>
             </tr>
         </table>
+        <h1>Welcome!</h1>
     </body>
 </html>

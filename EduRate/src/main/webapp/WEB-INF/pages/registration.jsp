@@ -11,14 +11,14 @@
 <body>
         <form th:action="@{/register}" method="post" >
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-     <label for="inputName" class="sr-only">Name</label>
-       <input type="name" id="inputName" name="name" class="form-control" placeholder="Name" required autofocus>
-     <label for="inputFirstName" class="sr-only">First Name</label>
-       <input type="name" id="inputFirstName" name="firstname" class="form-control" placeholder="FirstName" required>
-     <label for="inputPassword" class="sr-only">Password</label>
-       <input  type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-       <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-  </form>
+          <form:label for="inputName" path="userName" class="sr-only">Name</form:label>
+               <form:input type="text" path="userName" id="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus"/>
+               <form:label for="firstName" path="firstName" class="sr-only">First Name</form:label>
+               <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="FirstName" required="required"/>
+               <form:label for="inputPassword" path="password" class="sr-only">Password</form:label>
+               <form:input type="password" path="password" id="inputPassword" class="form-control" placeholder="Password" required="required"/>
+               <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+          </form:form>
     </div>
 </body>
 </html>

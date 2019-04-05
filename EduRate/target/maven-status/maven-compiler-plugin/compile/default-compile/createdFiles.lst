@@ -1,0 +1,11 @@
+com\bits\squad\edurate\controller\RegistrationController.class
+com\bits\squad\edurate\controller\LoginController.class
+com\bits\squad\edurate\dao\impl\UserMapper.class
+com\bits\squad\edurate\dao\impl\UserDAOImpl.class
+com\bits\squad\edurate\service\UserService.class
+com\bits\squad\edurate\model\User.class
+com\bits\squad\edurate\dao\UserDAO.class
+com\bits\squad\edurate\controller\HomeController.class
+com\bits\squad\edurate\model\Subject.class
+com\bits\squad\edurate\controller\SessionController.class
+com\bits\squad\edurate\service\impl\UserServiceImpl.class

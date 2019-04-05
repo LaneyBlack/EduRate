@@ -4,9 +4,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>EduRate : Error</title>
-        <h1Error: Wrong name or password</h1>
     </head>
     <body>
+        <h1Error: Wrong name or password</h1>
         <table align="left">
         <a href="login" style="font-size: 35px; text-decoration: none">Try again!</a>
         </table>

@@ -22,7 +22,6 @@ public class Subject {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -30,7 +29,6 @@ public class Subject {
     public int getSemester() {
         return semester;
     }
-
     public void setSemester(int semester) {
         this.semester = semester;
     }
@@ -38,7 +36,6 @@ public class Subject {
     public HashMap<Integer, Integer> getMarks() {
         return marks;
     }
-
     public void setMarks(HashMap<Integer, Integer> marks) {
         this.marks = marks;
     }

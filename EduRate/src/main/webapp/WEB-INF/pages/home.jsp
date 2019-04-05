@@ -15,7 +15,21 @@
              </tr>
         </table>
         <table align="left">
+        </table>
         <td><h1>EduRate</h1></td>
+        <table border="1" width="100%">
+          <tr>
+            <th>Month</th>
+            <th>Savings</th>
+          </tr>
+          <tr>
+            <td>January</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>February</td>
+            <td>$80</td>
+          </tr>
         </table>
     </body>
 </html>

@@ -18,10 +18,9 @@ public class RegistrationController {
     UserService userService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public ModelAndView getFormUsers(Model model) {
+    public String getFormUsers(Model model) {
         model.addAttribute("registration", new User());
-        ModelAndView modelAndView = new ModelAndView("registration");
-        return modelAndView;
+        return "registration";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
