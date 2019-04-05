@@ -27,7 +27,7 @@ public class RegistrationController {
     public String addUser(User user, User userSession) {
         try {
             userService.addUser(user);
-            userSession = user;
+            //userSession = user;
         } catch (ConstraintViolationException e){
             return "alreadyExists";
         }
