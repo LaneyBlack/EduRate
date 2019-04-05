@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:th="http://www.thymeleaf.org">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <head>
  <title>EduRate : Register</title>
@@ -9,7 +8,7 @@
 </head>
 
 <body>
-        <form th:action="@{/register}" method="post" >
+        <form:form method="POST" action="${pageContext.request.contextPath}/registration" modelAttribute="registration">
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
           <form:label for="inputName" path="userName" class="sr-only">Name</form:label>
                <form:input type="text" path="userName" id="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus"/>

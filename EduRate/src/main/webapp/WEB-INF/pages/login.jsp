@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
- xmlns:th="http://www.thymeleaf.org">
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
  <title>EduRate : Login</title>
  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -9,7 +7,7 @@
 </head>
 
 <body>
-        <form th:action="@{/login}" method="post" >
+        <form:form method="POST" action="${pageContext.request.contextPath}/login" modelAttribute="login">
           <h1 class="h3 mb-3 font-weight-normal">Login</h1>
         <form:label for="inputName" path="userName" class="sr-only">Name</form:label>
                   <form:input type="text" path="userName" id="inputName" name="name" class="form-control" placeholder="Name" required="required" autofocus="autofocus" />
