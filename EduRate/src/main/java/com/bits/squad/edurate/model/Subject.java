@@ -1,7 +1,6 @@
 package com.bits.squad.edurate.model;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Subject {
 
@@ -12,9 +11,13 @@ public class Subject {
         this.name = name;
     }
 
+    public Subject(String name, HashMap marks) {
+        this.name = name;
+    }
+
     private String name;
 
-    private HashMap<Integer, Integer> marks;
+    private HashMap<Integer, String> marks;
 
 
     public String getName() {
@@ -24,10 +27,10 @@ public class Subject {
         this.name = name;
     }
 
-    public HashMap<Integer, Integer> getMarks() {
+    public HashMap<Integer, String> getMarks() {
         return marks;
     }
-    public void setMarks(HashMap<Integer, Integer> marks) {
+    public void setMarks(HashMap<Integer, String> marks) {
         this.marks = marks;
     }
 

@@ -5,9 +5,11 @@ CREATE TABLE `edurate`.`user` (
   `UserName` VARCHAR(45) NOT NULL,
   `UserPassword` VARCHAR(45) NOT NULL,
   `UserFirstName` VARCHAR(45) NOT NULL,
+  `UserSubjects` VARCHAR(45),
   PRIMARY KEY (`UserId`),
   unique INDEX `UserId_UNIQUE` (`UserId` ASC),
   unique INDEX `UserName_UNIQUE` (`UserName` ASC))
   COMMENT = 'In this table I store Users with them id, name and password.';
+
 
 

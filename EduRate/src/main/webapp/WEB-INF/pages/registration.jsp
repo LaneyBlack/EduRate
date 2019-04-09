@@ -12,8 +12,8 @@
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
           <form:label for="inputName" path="userName" class="sr-only">Name</form:label>
                <form:input type="text" path="userName" id="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus"/>
-               <form:label for="firstName" path="firstName" class="sr-only">First Name</form:label>
-               <form:input type="text" path="firstName" id="firstName" class="form-control" placeholder="FirstName" required="required"/>
+               <form:label for="firstname" path="firstname" class="sr-only">First Name</form:label>
+               <form:input type="text" path="firstname" id="firstname" class="form-control" placeholder="Firstname" required="required"/>
                <form:label for="inputPassword" path="password" class="sr-only">Password</form:label>
                <form:input type="password" path="password" id="inputPassword" class="form-control" placeholder="Password" required="required"/>
                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>

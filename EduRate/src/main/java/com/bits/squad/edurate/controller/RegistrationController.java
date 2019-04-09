@@ -6,10 +6,8 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class RegistrationController {
@@ -27,7 +25,6 @@ public class RegistrationController {
     public String addUser(User user, User userSession) {
         try {
             userService.addUser(user);
-            //userSession = user;
         } catch (ConstraintViolationException e){
             return "alreadyExists";
         }
