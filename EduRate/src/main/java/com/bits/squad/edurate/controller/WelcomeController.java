@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-public class HomeController {
-
+public class WelcomeController {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String homeStartMethod(HttpServletRequest request, HttpServletResponse response) {
+        return "welcome";
+    }
 }
