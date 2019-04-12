@@ -8,6 +8,7 @@
     <body>
         <h1Error: Wrong name or password</h1>
         <table align="left">
+        <h1>Login Error. Name or Password is wrong!</h1>
         <a href="login" style="font-size: 35px; text-decoration: none">Try again!</a>
         </table>
     </body>

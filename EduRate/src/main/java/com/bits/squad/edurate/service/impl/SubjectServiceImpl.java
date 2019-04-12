@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @Service("subjectServiceImpl")
 public class SubjectServiceImpl implements SubjectService {
@@ -35,16 +36,18 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
-    public void updateSubject(String newSubjectName, HashMap newSubjectMarks, Subject subject, User user) {
+    public void updateSubject(Subject subject, User user) {
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList>() {
         }.getType();
         ArrayList<Subject> subjects = fromJson(user);
-        Subject newSubject = new Subject(newSubjectName, newSubjectMarks);
-        subjects.remove(subject);
-        subjects.add(newSubject);
-        user.setUserSubjects(gson.toJson(subjects, type));
-
+        for (Subject s:
+             subjects) {
+            if (s.getName().equals(subject.getName())) {
+                subjects.remove(s);
+                subjects.add(subject);
+            }
+        }
     }
 
     @Override
@@ -76,5 +79,11 @@ public class SubjectServiceImpl implements SubjectService {
     @Override
     public void removeAllSubjects(User user) {
         user.setUserSubjects(null);
+    }
+
+    @Override
+    public List<Subject> listSubjects(User user) {
+        ArrayList<Subject> listSubjects = fromJson(user);
+        return listSubjects;
     }
 }

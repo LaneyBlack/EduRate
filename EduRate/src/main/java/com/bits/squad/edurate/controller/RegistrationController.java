@@ -6,6 +6,7 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,9 +23,10 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String addUser(User user, User userSession) {
+    public String addUser(@ModelAttribute("user_register") User user,@ModelAttribute("user_session") User userSession) {
         try {
             userService.addUser(user);
+            userSession=user;
         } catch (ConstraintViolationException e){
             return "alreadyExists";
         }
