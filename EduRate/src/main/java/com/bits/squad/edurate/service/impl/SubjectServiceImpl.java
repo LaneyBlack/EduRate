@@ -48,6 +48,7 @@ public class SubjectServiceImpl implements SubjectService {
                 subjects.add(subject);
             }
         }
+        user.setUserSubjects(gson.toJson(subjects, type));
     }
 
     @Override
@@ -83,7 +84,6 @@ public class SubjectServiceImpl implements SubjectService {
 
     @Override
     public List<Subject> listSubjects(User user) {
-        ArrayList<Subject> listSubjects = fromJson(user);
-        return listSubjects;
+        return fromJson(user);
     }
 }

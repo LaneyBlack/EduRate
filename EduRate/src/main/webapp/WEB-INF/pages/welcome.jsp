@@ -12,6 +12,8 @@
                 </td>
                 <td><a href="registration">Register</a>
                 </td>
+                <td><a href="userTop">User Top</a>
+                </td>
             </tr>
         </table>
         <h1>Welcome!</h1>

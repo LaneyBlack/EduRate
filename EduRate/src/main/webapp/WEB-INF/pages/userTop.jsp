@@ -90,76 +90,24 @@
                   </td>
                   <td><a href="registration">Register</a>
                   </td>
-                  <td><a href="userTop">User Top</a>
-                  </td>
              </tr>
         </table>
          <body>
-            <h1>
-            	Add a Subject
-            </h1>
-
-            <c:url var="addAction" value="/subject/add" ></c:url>
-
-            <form:form action="${addAction}" commandName="subject">
-            <table>
-            	<c:if test="${!empty subject.name}">
-            	<tr>
-            		<td>
-            			<form:label path="name">
-            				<spring:message text="Name"/>
-            			</form:label>
-            		</td>
-            		<td>
-            			<form:input path="name" readonly="false" />
-            			<form:hidden path="name" />
-            		</td>
-            	</tr>
-            	</c:if>
-            	<tr>
-            		<td>
-            			<form:label path="marks">
-            				<spring:message text="Marks"/>
-            			</form:label>
-            		</td>
-            		<td>
-            			<form:input path="marks" />
-            		</td>
-            	</tr>
-            	<tr>
-            		<td colspan="2">
-            			<c:if test="${!empty subject.name}">
-            				<input type="submit"
-            					value="<spring:message text="Edit Subject"/>" />
-            			</c:if>
-            			<c:if test="${empty subject.name}">
-            				<input type="submit"
-            					value="<spring:message text="Add Subject"/>" />
-            			</c:if>
-            		</td>
-            	</tr>
-            </table>
-            </form:form>
-
-        <td><h1 style="color:#36752D">Your Stats:</h1></td>
 
 
 
-  <c:if test="${!empty listSubjects}">
+
+
+  <c:if test="${!empty userList}">
     <div class="datagrid"><table>
-       <thead><tr><th>Subject Name</th><th>Marks</th><th>Average Mark</th><th>Edit</th><th>Delete</th></tr></thead>
-       <c:forEach items="${listSubjects}" var="subject">
-       <tbody><tr><td>${subject.name}</td><td>${subject.marks}</td><td>${subject.averageMark}</td><td><a href="<c:url value='/edit/${subject.name}' />" >Edit</a></td><td><a href="<c:url value='/remove/${subject.name}' />" >Delete</a></td></tr>
+       <thead><tr><th>User Place</th><th>User Name</th><th>Average Mark</th></tr></thead>
+       <c:forEach items="${userList}" var="user">
+       <tbody><tr><td>${userPlace}</td><td>${user.userName}</td></tr>
        </tbody>
        </c:forEach>
        </table>
     </div>
      </c:if>
-
-    <h1> </h1>
-
-    <a href="apply" class="myButton">Apply</a>
-
     </body>
     </html>
 
