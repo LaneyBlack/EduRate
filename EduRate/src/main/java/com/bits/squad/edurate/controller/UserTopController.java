@@ -13,7 +13,7 @@ public class UserTopController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value ="userTop", method = RequestMethod.GET)
+    @RequestMapping(value ="/userTop", method = RequestMethod.GET)
     public String getUserTop(Model model) {
         model.addAttribute("userList",this.userService.userList());
         return "userTop";

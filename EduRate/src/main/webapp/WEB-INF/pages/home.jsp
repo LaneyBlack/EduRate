@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <html>
     <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>EduRate : Your Stats</title>
         <style type="text/css">
@@ -103,45 +107,24 @@
 
             <form:form action="${addAction}" commandName="subject">
             <table>
-            	<c:if test="${!empty subject.name}">
-            	<tr>
-            		<td>
-            			<form:label path="name">
-            				<spring:message text="Name"/>
-            			</form:label>
-            		</td>
-            		<td>
-            			<form:input path="name" readonly="false" />
-            			<form:hidden path="name" />
-            		</td>
-            	</tr>
-            	</c:if>
-            	<tr>
-            		<td>
-            			<form:label path="marks">
-            				<spring:message text="Marks"/>
-            			</form:label>
-            		</td>
-            		<td>
-            			<form:input path="marks" />
-            		</td>
-            	</tr>
-            	<tr>
-            		<td colspan="2">
-            			<c:if test="${!empty subject.name}">
-            				<input type="submit"
-            					value="<spring:message text="Edit Subject"/>" />
-            			</c:if>
-            			<c:if test="${empty subject.name}">
-            				<input type="submit"
-            					value="<spring:message text="Add Subject"/>" />
-            			</c:if>
-            		</td>
-            	</tr>
+            	<form action="/action_page.php">
+                Subject Name:<br>
+                <input type="text" name="subject.name">
+                <br>
+                Marks:<br>
+                <input type="text" name="subject.marks">
+                <input type="submit" value="Add">
+                </form><tr>
+
+
             </table>
             </form:form>
 
         <td><h1 style="color:#36752D">Your Stats:</h1></td>
+
+
+        <h1>  </h1>
+
 
 
 

@@ -1,5 +1,6 @@
 package com.bits.squad.edurate.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Subject {
@@ -17,8 +18,9 @@ public class Subject {
 
     private String name;
 
-    private HashMap<Integer, String> marks;
+    private HashMap<Integer, ArrayList<Integer>> marks;
 
+    private Integer averageMark;
 
     public String getName() {
         return name;
@@ -27,11 +29,22 @@ public class Subject {
         this.name = name;
     }
 
-    public HashMap<Integer, String> getMarks() {
+    public HashMap<Integer, ArrayList<Integer>> getMarks() {
         return marks;
     }
-    public void setMarks(HashMap<Integer, String> marks) {
+    public void setMarks(HashMap<Integer, ArrayList<Integer>> marks) {
         this.marks = marks;
+    }
+
+    public Integer getAverageMark(Integer quarter) {
+        for (Integer i:
+                marks.get(quarter)) {
+            averageMark += i;
+        }
+        return averageMark;
+    }
+    public void setAverageMark(Integer averageMark) {
+        this.averageMark = averageMark;
     }
 
     @Override
