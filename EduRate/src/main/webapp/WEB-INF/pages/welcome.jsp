@@ -4,6 +4,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>EduRate : Welcome</title>
+        <style type="text/css">
+                body{
+                  display: table;
+                  width: 99%;
+                  background: #dedede;
+                  text-align: left;
+                }
+                *{
+                  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                  box-sizing: border-box;         /* Opera/IE 8+ */
+                }
+
+                .aa_h2{
+                  font:100 5rem/1 Roboto;
+                  text-transform: uppercase;
+                }
+        </style>
     </head>
     <body>
         <table align="right">

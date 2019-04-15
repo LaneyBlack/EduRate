@@ -103,11 +103,11 @@
             	Add a Subject
             </h1>
 
-            <c:url var="addAction" value="/subject/add" ></c:url>
+            <c:url var="add" value="/home/add" ></c:url>
 
-            <form:form action="${addAction}" commandName="subject">
+            <form:form action="/home/add" commandName="add">
             <table>
-            	<form action="/action_page.php">
+            	<form action="/home/add">
                 Subject Name:<br>
                 <input type="text" name="subject.name">
                 <br>
